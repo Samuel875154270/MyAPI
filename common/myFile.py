@@ -20,6 +20,7 @@ class myFile():
         if os.path.exists(self.path):
             file = open(self.path, 'r', encoding='UTF-8')
             reader = file.read()
+            file.close()
 
             return reader
         else:
