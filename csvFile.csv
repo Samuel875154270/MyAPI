@@ -1,0 +1,2 @@
+"['list', '列表', 123]","('tup', '元组', 456)","{'Chinese': '字典', 'string': 'dict', 'digit': 789}",abc,123.01
+123.01,abc,"('tup', '元组', 456)","['list', '列表', 123]","{'Chinese': '字典', 'string': 'dict', 'digit': 789}"
