@@ -2,6 +2,7 @@ from common.myCSV import myCSV
 from common.myRe import myRe
 from common.myRequest import myRequest
 from common.myFile import myFile
+from common.myExcel import myExcel
 
 # list = ['list', '列表', 123]
 # tup = ('tup', '元组',  456)
@@ -52,9 +53,22 @@ from common.myFile import myFile
 # post = request.call(url,params,True)
 # # print(post)
 
-txt = myFile('./txt.txt')
-txt.write('中文')
-txt.write('一级')
+# txt = myFile('./txt.txt')
+# txt.write('中文')
+# txt.write('一级')
+#
+# read = txt.read()
+# print(read)
 
-read = txt.read()
-print(read)
+excel = myExcel('./excel.xls')
+excel.write(1,1,'name:')
+excel.write(2,1,'age:')
+excel.write(1,2,'张三')
+excel.write(2,2,21)
+print(excel.read(1,2))
+print(excel.getRows())
+print(excel.getCols())
+print(excel.getColValues(1))
+print(excel.getColValues(1,0,2))
+print(excel.getRowValues(1))
+print(excel.getRowValues(1,0,2))
