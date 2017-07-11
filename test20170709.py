@@ -3,6 +3,52 @@ from common.myRe import myRe
 from common.myRequest import myRequest
 from common.myFile import myFile
 from common.myExcel import myExcel
+import xml.etree.ElementTree
+import codecs
+from lxml import etree
+
+f = codecs.open('account_html.html', 'r', "UTF-8")
+content = f.read()
+f.closed
+tree = etree.HTML(content)
+# print(content)
+digit = 22
+# value = '//*[@id="subfrm"]/div[2]/div[%s]/div[1]' % digit
+value = '//*[@id="subfrm"]/div[2]/div[*]/div[7]'
+i = 2
+j = 1
+n = 1
+datas = []
+for i in range(3,23):
+    for j in range(1,9):
+        value = '//*[@id="subfrm"]/div[2]/div[%s]/div[%s]' % (i,j)
+        # print(value)
+        for html in tree.xpath(value):
+            if n%8 != 0:
+                datas.append(str(html.text).strip())
+            else:
+                datas.append(str(html.text).strip())
+                print(datas)
+                datas = []
+            n += 1
+
+
+
+
+# ET = xml.etree.ElementTree
+# tree = ET.parse('test.xml')
+# root = tree.getroot()
+# print(root.get('shelf'))
+# print(root.tag)
+# print('*'*20)
+# # print(root[1].tag)
+# # print(root[1][0].tag + ': ',root[1][0].text)
+#
+# for movie in root.findall('movie'):
+#     type = movie.find('type').text
+#     title = movie.get('title')
+#     print(title+'->',type)
+
 
 # list = ['list', '列表', 123]
 # tup = ('tup', '元组',  456)
@@ -59,16 +105,16 @@ from common.myExcel import myExcel
 #
 # read = txt.read()
 # print(read)
-
-excel = myExcel('./excel.xls')
-excel.write(1,1,'name:')
-excel.write(2,1,'age:')
-excel.write(1,2,'张三')
-excel.write(2,2,21)
-print(excel.read(1,2))
-print(excel.getRows())
-print(excel.getCols())
-print(excel.getColValues(1))
-print(excel.getColValues(1,0,2))
-print(excel.getRowValues(1))
-print(excel.getRowValues(1,0,2))
+#
+# excel = myExcel('./excel.xls')
+# excel.write(1,1,'name:')
+# excel.write(2,1,'age:')
+# excel.write(1,2,'张三')
+# excel.write(2,2,21)
+# print(excel.read(1,2))
+# print(excel.getRows())
+# print(excel.getCols())
+# print(excel.getColValues(1))
+# print(excel.getColValues(1,0,2))
+# print(excel.getRowValues(1))
+# print(excel.getRowValues(1,0,2))
