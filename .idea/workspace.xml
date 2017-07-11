@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ecab3a-010c-4227-82a7-62e942d1e82d" name="Default" comment="修改myFile">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account_html.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/myXML.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.xml" />
+    <list default="true" id="68ecab3a-010c-4227-82a7-62e942d1e82d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test20170709.py" afterPath="$PROJECT_DIR$/test20170709.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -272,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499608191131</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加lxml 与 xpath 写法">
+      <created>1499763450057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1499763450057</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -312,7 +315,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改myFile" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改myFile" />
+    <MESSAGE value="添加lxml 与 xpath 写法" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加lxml 与 xpath 写法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
