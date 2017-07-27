@@ -16,11 +16,29 @@
 #                 num = n
 # ran(20,8)
 
-from common.myFile import myFile
+lists = ['a*', 'abc', 'ab*', '*']
 
-txt = myFile('./txt.txt')
+str = 'abc'
 
-for i in range(1,501):
-    str = '"k%s":"v%s",' % (i, i)
-    # print(str)
-    txt.write(str)
+i = 0
+j = 0
+length = len(str)
+
+for i in range(0, length):
+    if i > 0 and i != length-1:
+        str = str[:length-i] + '*'
+    elif i == length-1:
+        str = '*'
+
+    for list in lists:
+        if list == str:
+            j = j + 1
+        if j > 0:
+            break
+    if j > 0:
+        break
+
+if j == 0:
+    print('Not found')
+else:
+    print(list)
