@@ -16,6 +16,7 @@ class myRequest():
         else:
             response = urllib.request.urlopen(request, data=params)
 
-        response = bytes(response.read()).decode(encoding='utf-8')
+        # response = bytes(response.read()).decode(encoding='utf-8')
+        response = response.read()
 
         return response
