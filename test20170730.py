@@ -13,14 +13,14 @@ headers = {
     'Upgrade-Insecure-Requests': 1,
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36'
 }
-
+ImgHeader = ('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36')
 
 pattern = r'55P" src=.([\s\S]*?\.(?:png|jpg|bmp|gif))"'
 
 j = 101
 print('正在下载图片...')
 
-for i in range(0,19):
+for i in range(0,1):
     if i == 0:
         url = 'http://www.xgyw.cc/Xiuren/Xiuren5425.html'
     else:
@@ -33,7 +33,8 @@ for i in range(0,19):
         img = 'http://www.xgyw.cc/' + img
         # print(img)
         # myCSV('./csvFile.csv').write([img])
-        getPictures().download(img, 'D:/0.整理/12.other/photo/2017/20170730_%s.jpg' % str(j))
+        # getPictures(ImgHeader).download(img, 'D:/0.整理/12.other/photo/2017/20170730_%s.jpg' % str(j))
+        getPictures(ImgHeader).download(img, 'C:/Users/Sam/Desktop/11120170730_%s.jpg' % str(j))
         j = j + 1
         time.sleep(1)
 
