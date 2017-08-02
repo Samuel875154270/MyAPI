@@ -15,16 +15,19 @@ headers = {
 }
 ImgHeader = ('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36')
 
-pattern = r'55P" src=.([\s\S]*?\.(?:png|jpg|bmp|gif))"'
+pattern = r'41P" src=.([\s\S]*?\.(?:png|jpg|bmp|gif))"'
 
-j = 153
+j = 210
 print('正在下载图片...')
 
-for i in range(17, 19):
+for i in range(3, 14):
     if i == 0:
-        url = 'http://www.xgyw.cc/Xiuren/Xiuren5425.html'
+        # url = 'http://www.xgyw.cc/Xiuren/Xiuren5425.html'
+        url = 'http://www.xgyw.cc/MTMeng/6052.html'
+        # url = 'http://www.xgyw.cc/MFStar/MFStar4281.html'
+        # url = 'http://www.xgyw.cc/BoLoli/BoLoli6772.html'
     else:
-        url = 'http://www.xgyw.cc/Xiuren/Xiuren5425_%s.html' % i
+        url = 'http://www.xgyw.cc/MTMeng/6052_%s.html' % i
     html = myRequest(headers).call(url)
     html = html.decode('gbk')
     # print(html)
@@ -35,7 +38,7 @@ for i in range(17, 19):
         # myCSV('./csvFile.csv').write([img])
         getPictures(ImgHeader).download(img, 'D:/0.整理/12.other/photo/2017/20170730_%s.jpg' % str(j))
         j = j + 1
-        time.sleep(1)
+        time.sleep(0.2)
 
 print('The End!')
 
