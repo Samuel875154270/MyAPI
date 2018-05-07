@@ -19,7 +19,7 @@ class Download(object):
         self.save_file = save_file
         self.count = count
         # 获取目标文件的大小，单位bytes
-        self.content_length = int(http.request("GET", self.url).headers["Content-Length"])
+        self.content_length = int(http.request("HEAD", self.url).headers["Content-Length"])
 
     def download(self, start, end):
         """
