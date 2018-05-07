@@ -104,6 +104,10 @@ class Download(object):
 
 
 if __name__ == "__main__":
-    print("go...........")
-    Download("http://img.zcool.cn/community/01935d57b420380000018c1bc2c27e.jpg@2o.jpg", "test.jpg").run()
-    print("end")
+    print("download...........")
+    # url = "http://img.zcool.cn/community/01935d57b420380000018c1bc2c27e.jpg@2o.jpg"
+    # save = "C:/Users/Administrator/Desktop/test.jpg"
+    url = "http://mirror.bit.edu.cn/apache/jmeter/binaries/apache-jmeter-4.0.zip"
+    save = "C:/Users/Administrator/Desktop/apache-jmeter-4.0.zip"
+    Download(url, save).run()
+    print("finish")
